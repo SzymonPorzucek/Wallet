@@ -53,7 +53,7 @@ const createNewTransaction = () => {
 	checkCategory(selectedCategory);
 	newTransaction.innerHTML = `
 		<p class="transaction__name">${categoryIcon} ${nameInput.value}</p>
-		<p class="transaction__amount">${amountInput.value} zł 
+		<p class="transaction__amount">${amountInput.value} $ 
 		<button class="delete" onclick='deleteTransaction(${ID})'><i class="fas fa-times"></i></button></p>
 	`;
 	amountInput.value > 0
@@ -90,7 +90,7 @@ const checkCategory = transaction => {
 };
 const countMoney = money => {
 	const newMoney = money.reduce((a, b) => a + b);
-	availableMoney.textContent = `${newMoney} zł`;
+	availableMoney.textContent = `${newMoney} $`;
 };
 
 const deleteTransaction = id => {
@@ -111,7 +111,7 @@ const deleteTransaction = id => {
 const deleteAllTransaction = () => {
 	incomeSection.innerHTML = '<h3>Income:</h3>';
 	expensesSection.innerHTML = '<h3>Expenses:</h3>';
-	availableMoney.textContent = '0 zł';
+	availableMoney.textContent = '0 $';
 	moneyArr = [0];
 };
 const changeStyleToLight = () => {

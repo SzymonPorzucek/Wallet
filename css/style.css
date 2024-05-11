@@ -192,6 +192,7 @@ main {
 .add-transaction-panel input,
 .add-transaction-panel select {
   width: 800px;
+  text-align: center;
 }
 .add-transaction-panel input,
 .add-transaction-panel select,
